@@ -307,56 +307,152 @@ p {
      </div>
 	</div>
 
+
+    
+    
 <script>
+// For Lower
 var d = new Date();
 if (d.getHours() === 18  || d.getHours() === 19 || d.getHours() === 12 || d.getHours() === 13) {
-
-var randNumb = Math.random();
-var x = "20%"; var y = "80%";
-if (randNumb >= 0 && randNumb <= 0.3) {
-    x = "20%"; y = "80%";}
-else if (randNumb > 0.3 && randNumb <= 0.7) {
-    x = "30%"; y = "70%"; }
-else {
-    x = "15%"; y = "85%";}
-
-document.getElementById("lower_heatempty").style.width=x;
-document.getElementById("lower_heatfull").style.width=y; 
-document.getElementById("lower_indicatorbut").className = "btn btn-danger btn-large";
-document.getElementById("lower_indicatorbut").innerHTML = "Packed!";
+    var randNumb = Math.random();
+    var x = "20%"; var y = "80%";
+    if (randNumb >= 0 && randNumb <= 0.3) {
+        x = "20%"; y = "80%";}
+    else if (randNumb > 0.3 && randNumb <= 0.7) {
+        x = "30%"; y = "70%"; }
+    else {
+        x = "15%"; y = "85%";}
+    document.getElementById("lower_heatempty").style.width=x;
+    document.getElementById("lower_heatfull").style.width=y; 
+    document.getElementById("lower_indicatorbut").className = "btn btn-danger btn-large";
+    document.getElementById("lower_indicatorbut").innerHTML = "Packed!";
+}
+// These are closing logic
+// For days sunday-wednesday, lower is closed at 12pm and opens at 6:30am
+else if(d.getDay() == 0 || d.getDay() == 1 || d.getDay() ==2 || d.getDay() == 3){
+    if (d.getHours() >= 0 && d.getHours() < 6) {
+        document.getElementById("lower_heatempty").className="bar bar-info";
+        document.getElementById("lower_heatempty").style.width="100%";
+        document.getElemetnById("lower_heatfull").style.width ="0%";
+        document.getElementById("lower_indicatorbut").className = "btn btn-info btn-large";
+        document.getElementById("lower_indicatorbut").innerHTML = "Closed";
+        }
+    else if  (d.getHours()==6 && d.getMinutes()<30) {
+        document.getElementById("lower_heatempty").className="bar bar-info";
+        document.getElementById("lower_heatempty").style.width="100%";
+        document.getElemetnById("lower_heatfull").style.width ="0%";
+        document.getElementById("lower_indicatorbut").className = "btn btn-info btn-large";
+        document.getElementById("lower_indicatorbut").innerHTML = "Closed";
+        }      
+}
+// CLOSING LOGIC
+// For days thursday-sunday, lower is closed at 2am
+// Lower opens at 6:30am on thursday and Friday
+// and opens at 7:30 on SAturday and Sunday
+else if(d.getDay() == 4 || d.getDay() == 5 || d.getDay() ==6){
+    if(d.getDay()==4||d.getDay()==5) {
+        if (d.getHours() >= 2 && d.getHours() < 6) {
+            document.getElementById("lower_heatempty").className="bar bar-info";
+            document.getElementById("lower_heatempty").style.width="100%";
+            document.getElemetnById("lower_heatfull").style.width ="0%";
+            document.getElementById("lower_indicatorbut").className = "btn btn-info btn-large";
+            document.getElementById("lower_indicatorbut").innerHTML = "Closed";
+            }
+        else if  (d.getHours()==6 && d.getMinutes()<30) {
+            document.getElementById("lower_heatempty").className="bar bar-info";
+            document.getElementById("lower_heatempty").style.width="100%";
+            document.getElemetnById("lower_heatfull").style.width ="0%";
+            document.getElementById("lower_indicatorbut").className = "btn btn-info btn-large";
+            document.getElementById("lower_indicatorbut").innerHTML = "Closed";
+            }   
+    }
+    else {
+        if (d.getHours() >= 2 && d.getHours() < 7) {
+            document.getElementById("lower_heatempty").className="bar bar-info";
+            document.getElementById("lower_heatempty").style.width="100%";
+            document.getElemetnById("lower_heatfull").style.width ="0%";
+            document.getElementById("lower_indicatorbut").className = "btn btn-info btn-large";
+            document.getElementById("lower_indicatorbut").innerHTML = "Closed";
+            }
+        else if  (d.getHours()==7 && d.getMinutes()<30) {
+            document.getElementById("lower_heatempty").className="bar bar-info";
+            document.getElementById("lower_heatempty").style.width="100%";
+            document.getElemetnById("lower_heatfull").style.width ="0%";
+            document.getElementById("lower_indicatorbut").className = "btn btn-info btn-large";
+            document.getElementById("lower_indicatorbut").innerHTML = "Closed";
+            } 
+    }            
 }
 else {
-document.getElementById("lower_heatempty").style.width="80%";
-document.getElementById("lower_heatfull").style.width="20%";
-document.getElementById("lower_indicatorbut").className = "btn btn-success btn-large";
-document.getElementById("lower_indicatorbut").innerHTML = "Peaceful";}
+    document.getElementById("lower_heatempty").style.width="80%";
+    document.getElementById("lower_heatfull").style.width="20%";
+    document.getElementById("lower_indicatorbut").className = "btn btn-success btn-large";
+    document.getElementById("lower_indicatorbut").innerHTML = "Peaceful";
+}
 </script>
 
 <script>
+// For upper
 var d = new Date();
 if (d.getHours() === 18  || d.getHours() === 19 || d.getHours() === 12 || d.getHours() ===13) {
-
-var randNumb = Math.random();
-var x = "20%"; var y = "80%";
-if (randNumb >= 0 && randNumb <= 0.3) {
-    x = "20%"; y = "80%";}
-else if (randNumb > 0.3 && randNumb <= 0.7) {
-    x = "30%"; y = "70%"; }
-else {
-    x = "15%"; y = "85%";}
-
-document.getElementById("lower_heatempty").style.width=x;
-document.getElementById("lower_heatfull").style.width=y; 
-document.getElementById("upper_heatempty").style.width="20%";
-document.getElementById("upper_heatfull").style.width="80%"; 
-document.getElementById("upper_indicatorbut").className = "btn btn-danger btn-large";
-document.getElementById("upper_indicatorbut").innerHTML = "Packed!";
+    var randNumb = Math.random();
+    //Simple way to vary the progress bar for packed
+    var x = "20%"; var y = "80%";
+    if (randNumb >= 0 && randNumb <= 0.3) {
+        x = "20%"; y = "80%";}
+    else if (randNumb > 0.3 && randNumb <= 0.7) {
+        x = "30%"; y = "70%"; }
+    else {
+        x = "15%"; y = "85%";}
+    document.getElementById("upper_heatempty").style.width=x;
+    document.getElementById("upper_heatfull").style.width=y; 
+    document.getElementById("upper_indicatorbut").className = "btn btn-danger btn-large";
+    document.getElementById("upper_indicatorbut").innerHTML = "Packed!";
 }
+// These are closing logic
+// For days sunday through thursday upper closes at 12pm
+// on sunday it opens at 8 am an on m-th opens at 7:30am
+else if(d.getDay() == 0 || d.getDay() == 1 || d.getDay() ==2 || d.getDay() == 3 || d.getDay() ==4){
+    if (d.getHours() >= 0 && d.getHours() < 7) {
+        document.getElementById("upper_heatempty").className="bar bar-info";
+        document.getElementById("upper_heatempty").style.width="100%";
+        document.getElemetnById("upper_heatfull").style.width ="0%";
+        document.getElementById("upper_indicatorbut").className = "btn btn-info btn-large";
+        document.getElementById("upper_indicatorbut").innerHTML = "Closed";
+        }
+   else if  (d.getHours()==7 && d.getMinutes()<30) {
+        document.getElementById("upper_heatempty").className="bar bar-info";
+        document.getElementById("upper_heatempty").style.width="100%";
+        document.getElemetnById("upper_heatfull").style.width ="0%";
+        document.getElementById("upper_indicatorbut").className = "btn btn-info btn-large";
+        document.getElementById("upper_indicatorbut").innerHTML = "Closed";
+        }     
+}
+// CLOSING LOGIC
+// For days  friday and saturday, upper closes at 2 and opens at 7:30am for friday and
+// 8am for Saturday
+else if(d.getDay()==5||d.getDay()==6) {
+        if (d.getHours() >= 2 && d.getHours() < 7) {
+            document.getElementById("upper_heatempty").className="bar bar-info";
+            document.getElementById("upper_heatempty").style.width="100%";
+            document.getElemetnById("upper_heatfull").style.width ="0%";
+            document.getElementById("upper_indicatorbut").className = "btn btn-info btn-large";
+            document.getElementById("upper_indicatorbut").innerHTML = "Closed";
+            }
+        else if  (d.getHours()==7 && d.getMinutes()<30) {
+            document.getElementById("upper_heatempty").className="bar bar-info";
+            document.getElementById("upper_heatempty").style.width="100%";
+            document.getElemetnById("upper_heatfull").style.width ="0%";
+            document.getElementById("upper_indicatorbut").className = "btn btn-info btn-large";
+            document.getElementById("upper_indicatorbut").innerHTML = "Closed";
+            }   
+    }       
 else {
-document.getElementById("upper_heatempty").style.width="80%";
-document.getElementById("upper_heatfull").style.width="20%";
-document.getElementById("upper_indicatorbut").className = "btn btn-success btn-large";
-document.getElementById("upper_indicatorbut").innerHTML = "Peaceful";}
+    document.getElementById("upper_heatempty").style.width="80%";
+    document.getElementById("upper_heatfull").style.width="20%";
+    document.getElementById("upper_indicatorbut").className = "btn btn-success btn-large";
+    document.getElementById("upper_indicatorbut").innerHTML = "Peaceful";
+}
 </script>
 
 <script>
