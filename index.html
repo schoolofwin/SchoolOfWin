@@ -224,8 +224,7 @@ p {
                                     </div>
                                 </div>
                             </div>
-                        </div>
-                        
+                        </div>   
                  </div>
                  <!-- LOWER ENDS HERE -->
                  <div class="accordian-group">
@@ -389,7 +388,13 @@ else if(d.getDay() == 0 || d.getDay() == 1 || d.getDay() ==2 || d.getDay() == 3)
         document.getElemetnById("lower_heatfull").style.width ="0%";
         document.getElementById("lower_indicatorbut").className = "btn btn-info btn-large";
         document.getElementById("lower_indicatorbut").innerHTML = "Closed";
-        }      
+        }
+    else {
+    document.getElementById("lower_heatempty").style.width="80%";
+    document.getElementById("lower_heatfull").style.width="20%";
+    document.getElementById("lower_indicatorbut").className = "btn btn-success btn-large";
+    document.getElementById("lower_indicatorbut").innerHTML = "Peaceful";
+    }
 }
 // CLOSING LOGIC
 // For days thursday-sunday, lower is closed at 2am
@@ -410,9 +415,15 @@ else if(d.getDay() == 4 || d.getDay() == 5 || d.getDay() ==6){
             document.getElemetnById("lower_heatfull").style.width ="0%";
             document.getElementById("lower_indicatorbut").className = "btn btn-info btn-large";
             document.getElementById("lower_indicatorbut").innerHTML = "Closed";
-            }   
+            }
+        else {
+            document.getElementById("lower_heatempty").style.width="80%";
+            document.getElementById("lower_heatfull").style.width="20%";
+            document.getElementById("lower_indicatorbut").className = "btn btn-success btn-large";
+            document.getElementById("lower_indicatorbut").innerHTML = "Peaceful";
+        }
     }
-    else {
+    else{
         if (d.getHours() >= 2 && d.getHours() < 7) {
             document.getElementById("lower_heatempty").className="bar bar-info";
             document.getElementById("lower_heatempty").style.width="100%";
@@ -426,8 +437,14 @@ else if(d.getDay() == 4 || d.getDay() == 5 || d.getDay() ==6){
             document.getElemetnById("lower_heatfull").style.width ="0%";
             document.getElementById("lower_indicatorbut").className = "btn btn-info btn-large";
             document.getElementById("lower_indicatorbut").innerHTML = "Closed";
-            } 
-    }            
+            }
+        else {
+            document.getElementById("lower_heatempty").style.width="80%";
+            document.getElementById("lower_heatfull").style.width="20%";
+            document.getElementById("lower_indicatorbut").className = "btn btn-success btn-large";
+            document.getElementById("lower_indicatorbut").innerHTML = "Peaceful";
+        }
+    }         
 }
 else {
     document.getElementById("lower_heatempty").style.width="80%";
@@ -472,7 +489,13 @@ else if(d.getDay() == 0 || d.getDay() == 1 || d.getDay() ==2 || d.getDay() == 3 
         document.getElemetnById("upper_heatfull").style.width ="0%";
         document.getElementById("upper_indicatorbut").className = "btn btn-info btn-large";
         document.getElementById("upper_indicatorbut").innerHTML = "Closed";
-        }     
+        }  
+    else {
+    document.getElementById("upper_heatempty").style.width="80%";
+    document.getElementById("upper_heatfull").style.width="20%";
+    document.getElementById("upper_indicatorbut").className = "btn btn-success btn-large";
+    document.getElementById("upper_indicatorbut").innerHTML = "Peaceful";
+}
 }
 // CLOSING LOGIC
 // For days  friday and saturday, upper closes at 2 and opens at 7:30am for friday and
@@ -491,7 +514,13 @@ else if(d.getDay()==5||d.getDay()==6) {
             document.getElemetnById("upper_heatfull").style.width ="0%";
             document.getElementById("upper_indicatorbut").className = "btn btn-info btn-large";
             document.getElementById("upper_indicatorbut").innerHTML = "Closed";
-            }   
+            }  
+        else {
+    document.getElementById("upper_heatempty").style.width="80%";
+    document.getElementById("upper_heatfull").style.width="20%";
+    document.getElementById("upper_indicatorbut").className = "btn btn-success btn-large";
+    document.getElementById("upper_indicatorbut").innerHTML = "Peaceful";
+}
     }       
 else {
     document.getElementById("upper_heatempty").style.width="80%";
