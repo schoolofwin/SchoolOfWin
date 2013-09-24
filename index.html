@@ -147,7 +147,7 @@ p {
         <div class="container" style="padding-bottom:2em;">
 		<div class="row-fluid heading" style="padding-top:4em;">
 			<div class="span12">
-				<h1 style="font-size:5em; color:white;">Trending View <sup>Beta</sup></h1>
+				<h1 style="font-size:5em; color:white;">Trending View</h1>
 			</div>
 		</div>
 		<div class="row-fluid subheading">
@@ -157,6 +157,8 @@ p {
 		</div></div>
         </div>
         
+        
+        <!-- COLLAPSE MENU STARTS HERE -->
         <div class="container" style="margin-top:1em; padding-top:4em;border-top:1px solid #eee; width=100%;">
 		<div class="row-fluid acc-wizard" style="margin-bottom:5em; ">
             <div class="span3" style="padding-left: 2em; padding-right:1em; border-right:1px solid #eee;">
@@ -165,10 +167,69 @@ p {
                 <br><em>As of now, we're only at Boston College</em></p>
                
                 <ul class="acc-wizard-sidebar">
-                    <li class="acc-wizard-todo" style="font-size:16px;"><a href="contact.html">Want more locations? Let us know</a></li>
+                    <li class="acc-wizard-todo" style="font-size:16px;"><a href="contact.html">If you want more features or just plain think we're wrong, help us out by sending an email!</a></li>
                 </ul>
             </div>
             <div class="span9">
+            <!-- PLEX STARTS HERE-->
+            <div class="accordian-group" style="padding-bottom:1em;" id="accordian-demo" >
+                        <div class="accordian-heading">
+                            <a class="accordian-toggle" data-toggle="collapse"
+                                data-parent="#accordian3" href="#collapseThree"><h2>Plex</h2></a>
+                        </div>
+                        <div id="collapseThree" class="accordian-body collapse">
+                            <div class="accordian-inner">
+                                <div class="span9 actions">
+                                    <div class="span8 offset2">
+                                        <div class="statistics">
+                                        <H3 style="font-color:white;">Plex/Flynn Recreation Complex</H3>
+                                            <div class="span3">
+                                                <div class="linediv-l">
+                                                </div>
+                                            </div>
+                                            <div class="span6">
+                                                <div class="linediv-c">
+                                                    <h3><script>
+                                                            var d = new Date();
+                                                            hours = d.getHours();
+                                                            if (hours > 12) {
+                                                                hours -= 12;
+                                                            } else if (hours == 0) {
+                                                                hours = 12;
+                                                            }
+                                                            document.write(hours);
+                                                            document.write(":");
+                                                            document.write((d.getMinutes()<10?'0':'') + d.getMinutes());
+                                                        </script>
+                                                    </h3>
+                                                    <p><script>
+                                                            var d = new Date();
+                                                            d.id = "hoursNow";
+                                                            var amPm = "AM"
+                                                            if (d.getHours() >= 12) {
+                                                                amPm = "PM";
+                                                            } else if (d.getHours() < 12) {
+                                                                amPm = "AM";
+                                                            }
+                                                            document.write(amPm);
+                                                    </script></p>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="span10 offset1">
+                                        <div class="thermometer progress active">
+                                            <div class="bar bar-success" id="plex_heatempty" style="width: 60%;"></div>
+                                            <div class="bar bar-warning" id="plex_heatfull" style="width: 40%;"></div>
+                                        </div>
+                                    </div>
+                                    <div class="span6 offset3 order">
+                                        <h3 class="btn btn-success btn-large" id="plex_indicatorbut" >Peaceful</h3>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
             <!-- LOWER BEGINS HERE-->
                 <div class="accordian-group" style="padding-bottom:1em;" id="accordian-demo" >
                         <div class="accordian-heading" >
@@ -227,8 +288,8 @@ p {
                             </div>
                         </div>   
                  </div>
-                 <!-- LOWER ENDS HERE -->
-                 <div class="accordian-group">
+                 <!-- LOWER ENDS HERE and UPPER BEGINS HERE -->
+                 <div class="accordian-group" style="padding-bottom:1em;" id="accordian-demo" >
                         <div class="accordian-heading">
                             <a class="accordian-toggle" data-toggle="collapse"
                                 data-parent="#accordian2" href="#collapseTwo"><h2>McElroy/Upper Dining Hall</h2></a>
@@ -286,6 +347,7 @@ p {
                             </div>
                         </div>
                     </div>
+                    
             </div>
             
         </div>
@@ -309,27 +371,27 @@ p {
 					<div class="accordian-group">
 						<div class="accordian-heading">
 							<a class="accordian-toggle" data-toggle="collapse"
-								data-parent="accordian2" href="#collapseOne">What does it mean that you're in beta?</a>
+								data-parent="accordian2" href="#collapseOnef">What does it mean that you're in beta?</a>
 						</div>
-						<div id="collapseOne" class="accordian-body collapse">
+						<div id="collapseOnef" class="accordian-body collapse">
 							<div class="accordian-inner">It means that we're still in the starting stages so we don't have support for a lot of things yet (weekends, late-night) but stay tuned for more!</div>
 						</div>
 					</div>
 					<div class="accordian-group">
 						<div class="accordian-heading">
 							<a class="accordian-toggle" data-toggle="collapse"
-								data-parent="#accordian2" href="#collapseTwo"> Is there a mobile application available?</a>
+								data-parent="#accordian2" href="#collapseTwof"> Is there a mobile application available?</a>
 						</div>
-						<div id="collapseTwo" class="accordian-body collapse">
+						<div id="collapseTwof" class="accordian-body collapse">
 							<div class="accordian-inner">Not yet, but soon! In the meanwhile, feel free to view this site on your phone or mobile device.</div>
 						</div>
 					</div>
                     <div class="accordian-group">
                         <div class="accordian-heading">
                             <a class="accordian-toggle" data-toggle="collapse"
-                                data-parent="#accordian2" href="#collapseThree"> The dining hall was packed when you said it wasn't! </a>
+                                data-parent="#accordian2" href="#collapseThreef"> The dining hall was packed when you said it wasn't! </a>
                         </div>
-                        <div id="collapseThree" class="accordian-body collapse">
+                        <div id="collapseThreef" class="accordian-body collapse">
                             <div class="accordian-inner">Send us an <a href="mailto:support@trending-view.com?subject=Feedback">email</a> and let us know when that was! We'll double check with our data to make sure it wasn't a bug </div>
                         </div>
                     </div>
@@ -373,22 +435,34 @@ if (d.getHours() === 18  || d.getHours() === 19 || d.getHours() === 12 || d.getH
     document.getElementById("lower_indicatorbut").className = "btn btn-danger btn-large";
     document.getElementById("lower_indicatorbut").innerHTML = "Packed!";
 }
+else if (d.getHours() == 14)
+{
+    document.getElementById("lower_heatempty").style.width="60%";
+    document.getElementById("lower_heatfull").style.width="40%"; 
+    document.getElementById("lower_indicatorbut").className = "btn btn-warning btn-large";
+    document.getElementById("lower_indicatorbut").innerHTML = "Busy";}
+else if (d.getHours()==17 && d.getMinutes()>25)
+{
+    document.getElementById("lower_heatempty").style.width="60%";
+    document.getElementById("lower_heatfull").style.width="40%"; 
+    document.getElementById("lower_indicatorbut").className = "btn btn-warning btn-large";
+    document.getElementById("lower_indicatorbut").innerHTML = "Busy";}
 // These are closing logic
 // For days sunday-wednesday, lower is closed at 12pm and opens at 6:30am
-else if(d.getDay() == 0 || d.getDay() == 1 || d.getDay() ==2 || d.getDay() == 3){
+else if(d.getDay() == 1 || d.getDay() == 2 || d.getDay() ==3 || d.getDay() == 4){
     if (d.getHours() >= 0 && d.getHours() < 6) {
+        document.getElementById("lower_indicatorbut").className = "btn btn-info btn-large";
+        document.getElementById("lower_indicatorbut").innerHTML = "Closed";
         document.getElementById("lower_heatempty").className="bar bar-info";
         document.getElementById("lower_heatempty").style.width="100%";
         document.getElemetnById("lower_heatfull").style.width ="0%";
-        document.getElementById("lower_indicatorbut").className = "btn btn-info btn-large";
-        document.getElementById("lower_indicatorbut").innerHTML = "Closed";
         }
     else if  (d.getHours()==6 && d.getMinutes()<30) {
+        document.getElementById("lower_indicatorbut").className = "btn btn-info btn-large";
+        document.getElementById("lower_indicatorbut").innerHTML = "Closed";
         document.getElementById("lower_heatempty").className="bar bar-info";
         document.getElementById("lower_heatempty").style.width="100%";
         document.getElemetnById("lower_heatfull").style.width ="0%";
-        document.getElementById("lower_indicatorbut").className = "btn btn-info btn-large";
-        document.getElementById("lower_indicatorbut").innerHTML = "Closed";
         }
     else {
     document.getElementById("lower_heatempty").style.width="80%";
@@ -401,21 +475,23 @@ else if(d.getDay() == 0 || d.getDay() == 1 || d.getDay() ==2 || d.getDay() == 3)
 // For days thursday-sunday, lower is closed at 2am
 // Lower opens at 6:30am on thursday and Friday
 // and opens at 7:30 on SAturday and Sunday
-else if(d.getDay() == 4 || d.getDay() == 5 || d.getDay() ==6){
+else if(d.getDay() == 5 || d.getDay() == 6 || d.getDay() ==0){
     if(d.getDay()==4||d.getDay()==5) {
         if (d.getHours() >= 2 && d.getHours() < 6) {
+             document.getElementById("lower_indicatorbut").className = "btn btn-info btn-large";
+            document.getElementById("lower_indicatorbut").innerHTML = "Closed";
             document.getElementById("lower_heatempty").className="bar bar-info";
             document.getElementById("lower_heatempty").style.width="100%";
             document.getElemetnById("lower_heatfull").style.width ="0%";
-            document.getElementById("lower_indicatorbut").className = "btn btn-info btn-large";
-            document.getElementById("lower_indicatorbut").innerHTML = "Closed";
+           
             }
         else if  (d.getHours()==6 && d.getMinutes()<30) {
+            document.getElementById("lower_indicatorbut").className = "btn btn-info btn-large";
+            document.getElementById("lower_indicatorbut").innerHTML = "Closed";
             document.getElementById("lower_heatempty").className="bar bar-info";
             document.getElementById("lower_heatempty").style.width="100%";
             document.getElemetnById("lower_heatfull").style.width ="0%";
-            document.getElementById("lower_indicatorbut").className = "btn btn-info btn-large";
-            document.getElementById("lower_indicatorbut").innerHTML = "Closed";
+            
             }
         else {
             document.getElementById("lower_heatempty").style.width="80%";
@@ -426,18 +502,20 @@ else if(d.getDay() == 4 || d.getDay() == 5 || d.getDay() ==6){
     }
     else{
         if (d.getHours() >= 2 && d.getHours() < 7) {
+            document.getElementById("lower_indicatorbut").className = "btn btn-info btn-large";
+            document.getElementById("lower_indicatorbut").innerHTML = "Closed";
             document.getElementById("lower_heatempty").className="bar bar-info";
             document.getElementById("lower_heatempty").style.width="100%";
             document.getElemetnById("lower_heatfull").style.width ="0%";
-            document.getElementById("lower_indicatorbut").className = "btn btn-info btn-large";
-            document.getElementById("lower_indicatorbut").innerHTML = "Closed";
+            
             }
         else if  (d.getHours()==7 && d.getMinutes()<30) {
+            document.getElementById("lower_indicatorbut").className = "btn btn-info btn-large";
+            document.getElementById("lower_indicatorbut").innerHTML = "Closed";
             document.getElementById("lower_heatempty").className="bar bar-info";
             document.getElementById("lower_heatempty").style.width="100%";
             document.getElemetnById("lower_heatfull").style.width ="0%";
-            document.getElementById("lower_indicatorbut").className = "btn btn-info btn-large";
-            document.getElementById("lower_indicatorbut").innerHTML = "Closed";
+            
             }
         else {
             document.getElementById("lower_heatempty").style.width="80%";
@@ -448,8 +526,8 @@ else if(d.getDay() == 4 || d.getDay() == 5 || d.getDay() ==6){
     }         
 }
 else {
-    document.getElementById("lower_heatempty").style.width="80%";
-    document.getElementById("lower_heatfull").style.width="20%";
+    document.getElementById("lower_heatempty").style.width="70%";
+    document.getElementById("lower_heatfull").style.width="30%";
     document.getElementById("lower_indicatorbut").className = "btn btn-success btn-large";
     document.getElementById("lower_indicatorbut").innerHTML = "Peaceful";
 }
@@ -473,23 +551,37 @@ if (d.getHours() === 18  || d.getHours() === 19 || d.getHours() === 12 || d.getH
     document.getElementById("upper_indicatorbut").className = "btn btn-danger btn-large";
     document.getElementById("upper_indicatorbut").innerHTML = "Packed!";
 }
+else if (d.getHours() == 14)
+{
+    document.getElementById("lower_heatempty").style.width="60%";
+    document.getElementById("lower_heatfull").style.width="40%"; 
+    document.getElementById("lower_indicatorbut").className = "btn btn-warning btn-large";
+    document.getElementById("lower_indicatorbut").innerHTML = "Busy";}
+else if (d.getHours()==17 && d.getMinutes()>25)
+{
+    document.getElementById("lower_heatempty").style.width="60%";
+    document.getElementById("lower_heatfull").style.width="40%"; 
+    document.getElementById("lower_indicatorbut").className = "btn btn-warning btn-large";
+    document.getElementById("lower_indicatorbut").innerHTML = "Busy";}
 // These are closing logic
 // For days sunday through thursday upper closes at 12pm
 // on sunday it opens at 8 am an on m-th opens at 7:30am
-else if(d.getDay() == 0 || d.getDay() == 1 || d.getDay() ==2 || d.getDay() == 3 || d.getDay() ==4){
+else if(d.getDay() == 1 || d.getDay() == 2 || d.getDay() ==3 || d.getDay() == 4 || d.getDay() ==5){
     if (d.getHours() >= 0 && d.getHours() < 7) {
+        document.getElementById("upper_indicatorbut").className = "btn btn-info btn-large";
+        document.getElementById("upper_indicatorbut").innerHTML = "Closed";
         document.getElementById("upper_heatempty").className="bar bar-info";
         document.getElementById("upper_heatempty").style.width="100%";
         document.getElemetnById("upper_heatfull").style.width ="0%";
-        document.getElementById("upper_indicatorbut").className = "btn btn-info btn-large";
-        document.getElementById("upper_indicatorbut").innerHTML = "Closed";
+        
         }
    else if  (d.getHours()==7 && d.getMinutes()<30) {
+        document.getElementById("upper_indicatorbut").className = "btn btn-info btn-large";
+        document.getElementById("upper_indicatorbut").innerHTML = "Closed";
         document.getElementById("upper_heatempty").className="bar bar-info";
         document.getElementById("upper_heatempty").style.width="100%";
         document.getElemetnById("upper_heatfull").style.width ="0%";
-        document.getElementById("upper_indicatorbut").className = "btn btn-info btn-large";
-        document.getElementById("upper_indicatorbut").innerHTML = "Closed";
+        
         }  
     else {
     document.getElementById("upper_heatempty").style.width="80%";
@@ -501,20 +593,22 @@ else if(d.getDay() == 0 || d.getDay() == 1 || d.getDay() ==2 || d.getDay() == 3 
 // CLOSING LOGIC
 // For days  friday and saturday, upper closes at 2 and opens at 7:30am for friday and
 // 8am for Saturday
-else if(d.getDay()==5||d.getDay()==6) {
+else if(d.getDay()==6||d.getDay()==7) {
         if (d.getHours() >= 2 && d.getHours() < 7) {
+            document.getElementById("upper_indicatorbut").className = "btn btn-info btn-large";
+            document.getElementById("upper_indicatorbut").innerHTML = "Closed";
             document.getElementById("upper_heatempty").className="bar bar-info";
             document.getElementById("upper_heatempty").style.width="100%";
             document.getElemetnById("upper_heatfull").style.width ="0%";
-            document.getElementById("upper_indicatorbut").className = "btn btn-info btn-large";
-            document.getElementById("upper_indicatorbut").innerHTML = "Closed";
+            
             }
         else if  (d.getHours()==7 && d.getMinutes()<30) {
+            document.getElementById("upper_indicatorbut").className = "btn btn-info btn-large";
+            document.getElementById("upper_indicatorbut").innerHTML = "Closed";
             document.getElementById("upper_heatempty").className="bar bar-info";
             document.getElementById("upper_heatempty").style.width="100%";
             document.getElemetnById("upper_heatfull").style.width ="0%";
-            document.getElementById("upper_indicatorbut").className = "btn btn-info btn-large";
-            document.getElementById("upper_indicatorbut").innerHTML = "Closed";
+            
             }  
         else {
     document.getElementById("upper_heatempty").style.width="80%";
@@ -530,6 +624,44 @@ else {
     document.getElementById("upper_indicatorbut").innerHTML = "Peaceful";
 }
 </script>
+
+<script>
+// For Plex
+var d = new Date();
+// Need to add Friday, Saturday, Sunday closing and times
+if (d.getDay() < 6) {
+    if (d.getHours()==11 || d.getHours()==12 || d.getHours() == 14) {
+        document.getElementById("plex_heatempty").style.width="60%";
+        document.getElementById("plex_heatfull").style.width="40%";
+        document.getElementById("plex_indicatorbut").className = "btn btn-success btn-large";
+        document.getElementById("plex_indicatorbut").innerHTML = "Active<br>Est:30-60 people";
+    }
+    else if (d.getHours()>=4 && d.getHours() <= 6) {
+        document.getElementById("plex_heatempty").style.width="10%";
+        document.getElementById("plex_heatfull").style.width="90%";
+        document.getElementById("plex_indicatorbut").className = "btn btn-danger btn-large";
+        document.getElementById("plex_indicatorbut").innerHTML = "Packed!<br>Est: 130-160 people";
+    }
+    else if (d.getHours()>=7 && d.getHours()<=9) {
+        document.getElementById("plex_heatempty").style.width="50%";
+        document.getElementById("plex_heatfull").style.width="50%";
+        document.getElementById("plex_indicatorbut").className = "btn btn-warning btn-large";
+        document.getElementById("plex_indicatorbut").innerHTML = "Busy<br>Est:60-90 people";
+    }
+    else if (d.getHours()==23 && d.getMinutes()>44) {
+        document.getElementById("plex_indicatorbut").className = "btn btn-info btn-large";
+        document.getElementById("plex_indicatorbut").innerHTML = "Closed";
+        document.getElementById("plex_heatempty").className="bar bar-info";
+        document.getElementById("plex_heatempty").style.width="100%";
+        document.getElemetnById("plex_heatfull").style.width ="0%";}
+    else {
+        document.getElementById("plex_heatempty").style.width = "70%";
+        document.getElementById("plex_heatfull").style.width = "30%";
+        document.getElementById("plex_indicatorbut").className = "btn btn-success btn-large";
+        document.getElementById("plex_indicatorbut").innerHTML= "Peaceful<br>Est: 20-30 people";
+ }
+ }
+        </script>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
