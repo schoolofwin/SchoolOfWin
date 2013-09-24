@@ -636,19 +636,19 @@ if (d.getDay() < 6) {
         document.getElementById("plex_indicatorbut").className = "btn btn-success btn-large";
         document.getElementById("plex_indicatorbut").innerHTML = "Active<br>Est:30-60 people";
     }
-    else if (d.getHours()>=4 && d.getHours() <= 6) {
+    else if (d.getHours()>=16 && d.getHours() <= 18) {
         document.getElementById("plex_heatempty").style.width="10%";
         document.getElementById("plex_heatfull").style.width="90%";
         document.getElementById("plex_indicatorbut").className = "btn btn-danger btn-large";
         document.getElementById("plex_indicatorbut").innerHTML = "Packed!<br>Est: 130-160 people";
     }
-    else if (d.getHours()>=7 && d.getHours()<=9) {
+    else if (d.getHours()>=19 && d.getHours()<=21) {
         document.getElementById("plex_heatempty").style.width="50%";
         document.getElementById("plex_heatfull").style.width="50%";
         document.getElementById("plex_indicatorbut").className = "btn btn-warning btn-large";
         document.getElementById("plex_indicatorbut").innerHTML = "Busy<br>Est:60-90 people";
     }
-    else if (d.getHours()==23 && d.getMinutes()>44) {
+    else if ((d.getHours()==23 && d.getMinutes()>44) || d.getHours()<6) {
         document.getElementById("plex_indicatorbut").className = "btn btn-info btn-large";
         document.getElementById("plex_indicatorbut").innerHTML = "Closed";
         document.getElementById("plex_heatempty").className="bar bar-info";
