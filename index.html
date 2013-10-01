@@ -16,6 +16,8 @@
 	src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fjquery.js"></script>
 <script
 	src="https://d396qusza40orc.cloudfront.net/startup%2Fcode%2Fbootstrap.js"></script>
+<script
+    src="hours.js"></script>
 <link
 	href="http://fonts.googleapis.com/css?family=Ubuntu:300,400,500,700,300italic,400italic,500italic,700italic"
 	rel="stylesheet" type="text/css">
@@ -121,7 +123,7 @@ p {
 }
 </style>
 </head>
-<body style="background-color:">
+<body style="background:url('blurred.png')">
 	<div class="navbar navbar-inverse navbar-fixed-top">
 		<div class="navbar-inner">
 			<div class="container">
@@ -134,8 +136,8 @@ p {
 				<div class="nav-collapse collapse">
 					<ul class="nav">
 						<li class="active"><a href="index.html">Home</a></li>
-						
-						<li><a href="contact.html">Contact</a></li>
+
+						<li><a href="contact.html">Feedback</a></li>
                         <li><a href="about.html"><!--About--></a></li>
 					</ul>
 				</div>
@@ -143,7 +145,7 @@ p {
 		</div>
 	</div>
 
-    <div style="background-color:#1569C7">
+    <div style="background-color:rgba(199,116,2,0.4); "><!--#1569C7-->
         <div class="container" style="padding-bottom:2em;">
 		<div class="row-fluid heading" style="padding-top:4em;">
 			<div class="span12">
@@ -156,8 +158,8 @@ p {
 			</div>
 		</div></div>
         </div>
-        
-        
+
+
         <!-- COLLAPSE MENU STARTS HERE -->
         <div class="container" style="margin-top:1em; padding-top:4em;border-top:1px solid #eee; width=100%;">
 		<div class="row-fluid acc-wizard" style="margin-bottom:5em; ">
@@ -165,10 +167,11 @@ p {
                 <p style="margin-botton: 2em;"><strong>Trending View</strong> lets you see how busy restaurants, bars, dining halls, and even gyms are so you can avoid the line and spend more time enjoying your day! <strong>To get started, click on the
                 links to your right to see how busy each location is.</strong>
                 <br><em>As of now, we're only at Boston College</em></p>
-               
+
                 <ul class="acc-wizard-sidebar">
-                    <li class="acc-wizard-todo" style="font-size:16px;"><a href="contact.html">If you want more features or just plain think we're wrong, help us out by sending an email!</a></li>
-                </ul>
+                    <li class="acc-wizard-todo" style="font-size:16px;">If something goes wrong or if you have some suggestions for how we can improve our site, <a href="contact.html">send us some feedback today!</a></li>
+                    <!--<li class="acc-wizard-todo" style="font-size:16px;">Sign up for our mailing list and receive updates as well as exclusive feature offers!</li>
+                --></ul>
             </div>
             <div class="span9">
             <!-- PLEX STARTS HERE-->
@@ -219,12 +222,12 @@ p {
                                     </div>
                                     <div class="span10 offset1">
                                         <div class="thermometer progress active">
-                                            <div class="bar bar-success" id="plex_heatempty" style="width: 60%;"></div>
-                                            <div class="bar bar-warning" id="plex_heatfull" style="width: 40%;"></div>
+                                            <div class="bar bar-success" id="plex_heatempty" style="width: 100%;"></div>
+                                            <div class="" id="plex_heatfull" style="width: 0%;"></div>
                                         </div>
                                     </div>
                                     <div class="span6 offset3 order">
-                                        <h3 class="btn btn-success btn-large" id="plex_indicatorbut" >Peaceful</h3>
+                                        <button class="btn btn-success btn-large" id="plex_but">Loading</button>
                                     </div>
                                 </div>
                             </div>
@@ -277,16 +280,16 @@ p {
                                     </div>
                                     <div class="span10 offset1">
                                         <div class="thermometer progress active">
-                                            <div class="bar bar-success" id="lower_heatempty" style="width: 60%;"></div>
-                                            <div class="bar bar-warning" id="lower_heatfull" style="width: 40%;"></div>
+                                            <div class="bar bar-success" id="lower_heatempty" style="width: 100%;"></div>
+                                            <div id="lower_heatfull" style="width: 40%;"></div>
                                         </div>
                                     </div>
                                     <div class="span6 offset3 order">
-                                        <button class="btn btn-danger btn-large" id="lower_indicatorbut" onclick="alert('Packed: More than a 20 minute wait for food\nPeaceful: Walk in and enjoy!')">Packed!</button>
+                                        <button class="btn btn-success btn-large" id="lower_indicatorbut">Loading</button>
                                     </div>
                                 </div>
                             </div>
-                        </div>   
+                        </div>
                  </div>
                  <!-- LOWER ENDS HERE and UPPER BEGINS HERE -->
                  <div class="accordian-group" style="padding-bottom:1em;" id="accordian-demo" >
@@ -336,30 +339,30 @@ p {
                                     </div>
                                     <div class="span10 offset1">
                                         <div class="thermometer progress active">
-                                            <div class="bar bar-success" id="upper_heatempty" style="width: 60%;"></div>
-                                            <div class="bar bar-warning" id="upper_heatfull" style="width: 40%;"></div>
+                                            <div class="bar bar-success" id="upper_heatempty" style="width: 100%;"></div>
+                                            <div id="upper_heatfull" style="width: 0%;"></div>
                                         </div>
                                     </div>
                                     <div class="span6 offset3 order">
-                                        <h3 class="btn btn-success btn-large" id="upper_indicatorbut" >Peaceful</h3>
+                                        <button class="btn btn-success btn-large" id="upper_indicatorbut">Loading</button>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    
+
             </div>
-            
+
         </div>
             </div>
-            
-            
-            
-            
-            
+
+
+
+
+
         <div class="container">
         <div class="row-fluid pitch">
-            
+
 		</div>
 		
 		<div class="row-fluid section2"></div>
@@ -395,15 +398,15 @@ p {
                             <div class="accordian-inner">Send us an <a href="mailto:support@trending-view.com?subject=Feedback">email</a> and let us know when that was! We'll double check with our data to make sure it wasn't a bug </div>
                         </div>
                     </div>
-                            
+
 				</div>
 			</div>
 		</div>
 		<div class="row-fluid footer".
-     
-			
-			
-			
+
+
+
+
 			<div class="span12">
 				<p>
 					This work is licensed under the <a
@@ -415,253 +418,93 @@ p {
      </div>
 	</div>
 
-
-    
-    
 <script>
-// For Lower
 var d = new Date();
-if (d.getHours() === 18  || d.getHours() === 19 || d.getHours() === 12 || d.getHours() === 13) {
-    var randNumb = Math.random();
-    var x = "20%"; var y = "80%";
-    if (randNumb >= 0 && randNumb <= 0.3) {
-        x = "20%"; y = "80%";}
-    else if (randNumb > 0.3 && randNumb <= 0.7) {
-        x = "30%"; y = "70%"; }
-    else {
-        x = "15%"; y = "85%";}
-    document.getElementById("lower_heatempty").style.width=x;
-    document.getElementById("lower_heatfull").style.width=y; 
-    document.getElementById("lower_indicatorbut").className = "btn btn-danger btn-large";
-    document.getElementById("lower_indicatorbut").innerHTML = "Packed!";
-}
-else if (d.getHours() == 14)
-{
-    document.getElementById("lower_heatempty").style.width="60%";
-    document.getElementById("lower_heatfull").style.width="40%"; 
-    document.getElementById("lower_indicatorbut").className = "btn btn-warning btn-large";
-    document.getElementById("lower_indicatorbut").innerHTML = "Busy";}
-else if (d.getHours()==17 && d.getMinutes()>25)
-{
-    document.getElementById("lower_heatempty").style.width="60%";
-    document.getElementById("lower_heatfull").style.width="40%"; 
-    document.getElementById("lower_indicatorbut").className = "btn btn-warning btn-large";
-    document.getElementById("lower_indicatorbut").innerHTML = "Busy";}
-// These are closing logic
-// For days sunday-wednesday, lower is closed at 12pm and opens at 6:30am
-else if(d.getDay() == 1 || d.getDay() == 2 || d.getDay() ==3 || d.getDay() == 4){
-    if (d.getHours() >= 0 && d.getHours() < 6) {
-        document.getElementById("lower_indicatorbut").className = "btn btn-info btn-large";
-        document.getElementById("lower_indicatorbut").innerHTML = "Closed";
-        document.getElementById("lower_heatempty").className="bar bar-info";
-        document.getElementById("lower_heatempty").style.width="100%";
-        document.getElemetnById("lower_heatfull").style.width ="0%";
+var hours = d.getHours();
+var minutes = d.getMinutes();
+var day = d.getDay();
+var lowerBar = document.getElementById("lower_heatempty");
+var upperBar = document.getElementById("upper_heatempty");
+var lowerBut = document.getElementById("lower_indicatorbut");
+var upperBut = document.getElementById("upper_indicatorbut");
+var full = "Full<br>Est. 20-30 minute wait";
+var busy = "Busy<br>Est. 10-20 minute wait";
+var little = "Little/No wait<br>Est. 0-5 minute wait";
+// For Sunday through Friday it gets busy around 12-1:30 and 6-8pm
+// Dining Hall
+if (day < 6) {
+    if (hours === 12 || (hours===13 && minutes<=30)) {
+            lowerBut.innerHTML = full;
+            upperBut.innerHTML = full;
+            lowerBar.style.width = "80%";
+            upperBar.style.width = "85%";
+            lowerBar.className = "bar bar-danger";
+            lowerBut.className = "btn btn-danger btn-large";
+            upperBar.className = "bar bar-danger";
+            upperBut.className = "btn btn-danger btn-large";
         }
-    else if  (d.getHours()==6 && d.getMinutes()<30) {
-        document.getElementById("lower_indicatorbut").className = "btn btn-info btn-large";
-        document.getElementById("lower_indicatorbut").innerHTML = "Closed";
-        document.getElementById("lower_heatempty").className="bar bar-info";
-        document.getElementById("lower_heatempty").style.width="100%";
-        document.getElemetnById("lower_heatfull").style.width ="0%";
+    else if (hours === 18 || hours === 19) {
+            lowerBut.innerHTML = full;
+            upperBut.innerHTML = full;
+            lowerBar.style.width = "80%";
+            upperBar.style.width = "85%";
+            lowerBar.className = "bar bar-danger";
+            lowerBut.className = "btn btn-danger btn-large";
+            upperBar.className = "bar bar-danger";
+            upperBut.className = "btn btn-danger btn-large";
         }
     else {
-    document.getElementById("lower_heatempty").style.width="80%";
-    document.getElementById("lower_heatfull").style.width="20%";
-    document.getElementById("lower_indicatorbut").className = "btn btn-success btn-large";
-    document.getElementById("lower_indicatorbut").innerHTML = "Peaceful";
-    }
+            lowerBut.innerHTML = little;
+            lowerBar.style.width = "30%";
+            upperBut.innerHTML = little;
+            upperBar.style.width = "35%";
+     }
 }
-// CLOSING LOGIC
-// For days thursday-sunday, lower is closed at 2am
-// Lower opens at 6:30am on thursday and Friday
-// and opens at 7:30 on SAturday and Sunday
-else if(d.getDay() == 5 || d.getDay() == 6 || d.getDay() ==0){
-    if(d.getDay()==4||d.getDay()==5) {
-        if (d.getHours() >= 2 && d.getHours() < 6) {
-             document.getElementById("lower_indicatorbut").className = "btn btn-info btn-large";
-            document.getElementById("lower_indicatorbut").innerHTML = "Closed";
-            document.getElementById("lower_heatempty").className="bar bar-info";
-            document.getElementById("lower_heatempty").style.width="100%";
-            document.getElemetnById("lower_heatfull").style.width ="0%";
-           
-            }
-        else if  (d.getHours()==6 && d.getMinutes()<30) {
-            document.getElementById("lower_indicatorbut").className = "btn btn-info btn-large";
-            document.getElementById("lower_indicatorbut").innerHTML = "Closed";
-            document.getElementById("lower_heatempty").className="bar bar-info";
-            document.getElementById("lower_heatempty").style.width="100%";
-            document.getElemetnById("lower_heatfull").style.width ="0%";
-            
-            }
-        else {
-            document.getElementById("lower_heatempty").style.width="80%";
-            document.getElementById("lower_heatfull").style.width="20%";
-            document.getElementById("lower_indicatorbut").className = "btn btn-success btn-large";
-            document.getElementById("lower_indicatorbut").innerHTML = "Peaceful";
-        }
+else if (day === 6) {
+    if (hours === 12 || hours === 13) {
+            lowerBut.innerHTML = busy;
+            upperBut.innerHTML = busy;
+            lowerBar.style.width = "60%";
+            upperBar.style.width = "65%";
+            lowerBar.className = "bar bar-warning";
+            lowerBut.className = "btn btn-warning btn-large";
+            upperBar.className = "bar bar-warning";
+            upperBut.className = "btn btn-warning btn-large";
     }
-    else{
-        if (d.getHours() >= 2 && d.getHours() < 7) {
-            document.getElementById("lower_indicatorbut").className = "btn btn-info btn-large";
-            document.getElementById("lower_indicatorbut").innerHTML = "Closed";
-            document.getElementById("lower_heatempty").className="bar bar-info";
-            document.getElementById("lower_heatempty").style.width="100%";
-            document.getElemetnById("lower_heatfull").style.width ="0%";
-            
-            }
-        else if  (d.getHours()==7 && d.getMinutes()<30) {
-            document.getElementById("lower_indicatorbut").className = "btn btn-info btn-large";
-            document.getElementById("lower_indicatorbut").innerHTML = "Closed";
-            document.getElementById("lower_heatempty").className="bar bar-info";
-            document.getElementById("lower_heatempty").style.width="100%";
-            document.getElemetnById("lower_heatfull").style.width ="0%";
-            
-            }
-        else {
-            document.getElementById("lower_heatempty").style.width="80%";
-            document.getElementById("lower_heatfull").style.width="20%";
-            document.getElementById("lower_indicatorbut").className = "btn btn-success btn-large";
-            document.getElementById("lower_indicatorbut").innerHTML = "Peaceful";
-        }
-    }         
-}
-else {
-    document.getElementById("lower_heatempty").style.width="70%";
-    document.getElementById("lower_heatfull").style.width="30%";
-    document.getElementById("lower_indicatorbut").className = "btn btn-success btn-large";
-    document.getElementById("lower_indicatorbut").innerHTML = "Peaceful";
 }
 </script>
 
 <script>
-// For upper
+var plexBut = document.getElementById("plex_but");
+var plexBar = document.getElementById("plex_heatempty");
 var d = new Date();
-if (d.getHours() === 18  || d.getHours() === 19 || d.getHours() === 12 || d.getHours() ===13) {
-    var randNumb = Math.random();
-    //Simple way to vary the progress bar for packed
-    var x = "20%"; var y = "80%";
-    if (randNumb >= 0 && randNumb <= 0.3) {
-        x = "20%"; y = "80%";}
-    else if (randNumb > 0.3 && randNumb <= 0.7) {
-        x = "30%"; y = "70%"; }
-    else {
-        x = "15%"; y = "85%";}
-    document.getElementById("upper_heatempty").style.width=x;
-    document.getElementById("upper_heatfull").style.width=y; 
-    document.getElementById("upper_indicatorbut").className = "btn btn-danger btn-large";
-    document.getElementById("upper_indicatorbut").innerHTML = "Packed!";
-}
-else if (d.getHours() == 14)
-{
-    document.getElementById("lower_heatempty").style.width="60%";
-    document.getElementById("lower_heatfull").style.width="40%"; 
-    document.getElementById("lower_indicatorbut").className = "btn btn-warning btn-large";
-    document.getElementById("lower_indicatorbut").innerHTML = "Busy";}
-else if (d.getHours()==17 && d.getMinutes()>25)
-{
-    document.getElementById("lower_heatempty").style.width="60%";
-    document.getElementById("lower_heatfull").style.width="40%"; 
-    document.getElementById("lower_indicatorbut").className = "btn btn-warning btn-large";
-    document.getElementById("lower_indicatorbut").innerHTML = "Busy";}
-// These are closing logic
-// For days sunday through thursday upper closes at 12pm
-// on sunday it opens at 8 am an on m-th opens at 7:30am
-else if(d.getDay() == 1 || d.getDay() == 2 || d.getDay() ==3 || d.getDay() == 4 || d.getDay() ==5){
-    if (d.getHours() >= 0 && d.getHours() < 7) {
-        document.getElementById("upper_indicatorbut").className = "btn btn-info btn-large";
-        document.getElementById("upper_indicatorbut").innerHTML = "Closed";
-        document.getElementById("upper_heatempty").className="bar bar-info";
-        document.getElementById("upper_heatempty").style.width="100%";
-        document.getElemetnById("upper_heatfull").style.width ="0%";
-        
-        }
-   else if  (d.getHours()==7 && d.getMinutes()<30) {
-        document.getElementById("upper_indicatorbut").className = "btn btn-info btn-large";
-        document.getElementById("upper_indicatorbut").innerHTML = "Closed";
-        document.getElementById("upper_heatempty").className="bar bar-info";
-        document.getElementById("upper_heatempty").style.width="100%";
-        document.getElemetnById("upper_heatfull").style.width ="0%";
-        
-        }  
-    else {
-    document.getElementById("upper_heatempty").style.width="80%";
-    document.getElementById("upper_heatfull").style.width="20%";
-    document.getElementById("upper_indicatorbut").className = "btn btn-success btn-large";
-    document.getElementById("upper_indicatorbut").innerHTML = "Peaceful";
-}
-}
-// CLOSING LOGIC
-// For days  friday and saturday, upper closes at 2 and opens at 7:30am for friday and
-// 8am for Saturday
-else if(d.getDay()==6||d.getDay()==7) {
-        if (d.getHours() >= 2 && d.getHours() < 7) {
-            document.getElementById("upper_indicatorbut").className = "btn btn-info btn-large";
-            document.getElementById("upper_indicatorbut").innerHTML = "Closed";
-            document.getElementById("upper_heatempty").className="bar bar-info";
-            document.getElementById("upper_heatempty").style.width="100%";
-            document.getElemetnById("upper_heatfull").style.width ="0%";
-            
-            }
-        else if  (d.getHours()==7 && d.getMinutes()<30) {
-            document.getElementById("upper_indicatorbut").className = "btn btn-info btn-large";
-            document.getElementById("upper_indicatorbut").innerHTML = "Closed";
-            document.getElementById("upper_heatempty").className="bar bar-info";
-            document.getElementById("upper_heatempty").style.width="100%";
-            document.getElemetnById("upper_heatfull").style.width ="0%";
-            
-            }  
-        else {
-    document.getElementById("upper_heatempty").style.width="80%";
-    document.getElementById("upper_heatfull").style.width="20%";
-    document.getElementById("upper_indicatorbut").className = "btn btn-success btn-large";
-    document.getElementById("upper_indicatorbut").innerHTML = "Peaceful";
-}
-    }       
-else {
-    document.getElementById("upper_heatempty").style.width="80%";
-    document.getElementById("upper_heatfull").style.width="20%";
-    document.getElementById("upper_indicatorbut").className = "btn btn-success btn-large";
-    document.getElementById("upper_indicatorbut").innerHTML = "Peaceful";
-}
-</script>
 
-<script>
-// For Plex
-var d = new Date();
-// Need to add Friday, Saturday, Sunday closing and times
 if (d.getDay() < 6) {
-    if (d.getHours()==11 || d.getHours()==12 || d.getHours() == 14) {
-        document.getElementById("plex_heatempty").style.width="60%";
-        document.getElementById("plex_heatfull").style.width="40%";
-        document.getElementById("plex_indicatorbut").className = "btn btn-success btn-large";
-        document.getElementById("plex_indicatorbut").innerHTML = "Active<br>Est:30-60 people";
+    if (d.getHours()===11 || d.getHours()===12 || d.getHours() === 13) {
+        plexBar.style.width="50%";
+        plexBut.innerHTML = "Active<br>Est:40-60 people";
     }
     else if (d.getHours()>=16 && d.getHours() <= 18) {
-        document.getElementById("plex_heatempty").style.width="10%";
-        document.getElementById("plex_heatfull").style.width="90%";
-        document.getElementById("plex_indicatorbut").className = "btn btn-danger btn-large";
-        document.getElementById("plex_indicatorbut").innerHTML = "Packed!<br>Est: 130-160 people";
+        plexBar.style.width="90%";
+        plexBut.innerHTML = "Full<br>Est:130-160 people";
+        plexBut.className = "btn btn-danger btn-large";
+        plexBar.className = "bar bar-danger";
     }
-    else if (d.getHours()>=19 && d.getHours()<=21) {
-        document.getElementById("plex_heatempty").style.width="50%";
-        document.getElementById("plex_heatfull").style.width="50%";
-        document.getElementById("plex_indicatorbut").className = "btn btn-warning btn-large";
-        document.getElementById("plex_indicatorbut").innerHTML = "Busy<br>Est:60-90 people";
-    }
-    else if ((d.getHours()==23 && d.getMinutes()>44) || d.getHours()<6) {
-        document.getElementById("plex_indicatorbut").className = "btn btn-info btn-large";
-        document.getElementById("plex_indicatorbut").innerHTML = "Closed";
-        document.getElementById("plex_heatempty").className="bar bar-info";
-        document.getElementById("plex_heatempty").style.width="100%";
-        document.getElemetnById("plex_heatfull").style.width ="0%";}
+    else if (d.getHours() > 18 && d.getHours() < 23) {
+        plexBar.style.width="65%";
+        plexBut.innerHTML = "Busy<br>Est:60-90 people";
+        plexBut.className = "btn btn-warning btn-large";
+        plexBar.className = "bar bar-warning";}
+    else if ((d.getHours()===23 && d.getMinutes()>44) || d.getHours()<6) {
+        plexBar.style.width="100%";
+        plexBut.innerHTML = "Closed";
+        }
     else {
-        document.getElementById("plex_heatempty").style.width = "70%";
-        document.getElementById("plex_heatfull").style.width = "30%";
-        document.getElementById("plex_indicatorbut").className = "btn btn-success btn-large";
-        document.getElementById("plex_indicatorbut").innerHTML= "Peaceful<br>Est: 20-30 people";
- }
- }
-        </script>
+        plexBar.style.width="30%";
+        plexBut.innerHTML = "Peaceful<br>Est:20-30 people";
+        }
+}
+</script>
 
 <script>
   (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -684,3 +527,4 @@ if (d.getDay() < 6) {
 </script>
 </body>
 </html>
+
